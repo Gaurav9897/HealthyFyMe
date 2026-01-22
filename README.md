@@ -1,2 +1,2 @@
-# HealthyFyMe
-This is a Generative Health Case
+# Healthfyme
+This is a Generative health case
