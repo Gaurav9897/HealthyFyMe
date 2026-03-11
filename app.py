@@ -49,14 +49,14 @@ prompt ='''
 <Goal> Generate the customize report addressing the problem of the user
 Here is the qustion that has asked.
 <Context> Here are the details that the user has provided.
-name ={name}
-age = {age}
-gender = {gender}
-height ={height}
-weight = {weight}
-bmi ={bmi}
-activity rating (0-5) ={active}
-fitness rating (0-5) = {fitness}
+Name = {name}
+Age = {age}
+Gender = {gender}
+Height = {height} cm
+Weight = {weight} kg
+BMI = {bmi:.2f} kg/m²
+Activity rating (0-5) ={activity_level}
+Fitness rating (0-5) = {fitness}
 
 <Format>
 * Start with the 2-3 line of comment on the details that user has provided
@@ -75,3 +75,4 @@ fitness rating (0-5) = {fitness}
 if st.button('Generate'):
     response = model.invoke(prompt)
     st.write(response.content)
+
