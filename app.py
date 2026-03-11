@@ -39,7 +39,7 @@ bmi = pd.to_numeric(weight)/((pd.to_numeric(height)/100)**2)
 active = st.sidebar.slider('Rate your Activity(0-5)',0,5,step=1)
 fitness = st.sidebar.slider('Rate your Fitness(0-5)',0,5,step=1)
 if st.sidebar.button('Submit'):
-    st.sidebar.write(f"{name}, your BMI is {bmi} Kg/m^2")
+    st.sidebar.write(f"{name}, your BMI is {bmi:.2f} Kg/m²")
 
 
 # Lets use the gemini model to generate the report
@@ -75,4 +75,5 @@ Fitness rating (0-5) = {fitness}
 if st.button('Generate'):
     response = model.invoke(prompt)
     st.write(response.content)
+
 
