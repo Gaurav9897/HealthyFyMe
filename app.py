@@ -55,7 +55,7 @@ Gender = {gender}
 Height = {height} cm
 Weight = {weight} kg
 BMI = {bmi:.2f} kg/m²
-Activity rating (0-5) ={activity_level}
+Activity rating (0-5) = {active}
 Fitness rating (0-5) = {fitness}
 
 <Format>
@@ -70,11 +70,13 @@ Fitness rating (0-5) = {fitness}
 <Instructions>
 * Use bullet points where ever possible.
 * Create tables to represent any data where ever possible.
-* Strictly do not advice any medicine.'''
+* Strictly do not advice any medicine.
+'''
 
 if st.button('Generate'):
     response = model.invoke(prompt)
     st.write(response.content)
+
 
 
 
