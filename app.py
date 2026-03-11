@@ -44,7 +44,7 @@ if st.sidebar.button('Submit'):
 
 # Lets use the gemini model to generate the report
 user_input = st.text_input('Ask me your question.')
-prompt ='''
+prompt =f'''
 <Role> You are an expert in health and wellness and has 10+ years experience in health guidance
 <Goal> Generate the customize report addressing the problem of the user
 Here is the qustion that has asked.
@@ -75,5 +75,6 @@ Fitness rating (0-5) = {fitness}
 if st.button('Generate'):
     response = model.invoke(prompt)
     st.write(response.content)
+
 
 
